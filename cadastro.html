@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body bgcolor="#071d41">  //cor padrao do body do ITI
+  <div class="container">
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paraexcluir"></a>
+
+    <div class="content">
+
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login" style="display: none;">
+        <center>
+          <img src="logo_iti.png" alt="" srcset="" width="30%" height="30%" style="margin-top: 15px; margin-left:15px">
+        </center>
+        <form method="post" action="">
+          <h1>Excluir Cadastro</h1>
+          <p>
+            <label for="nome_cad">Nome</label>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="ex.: Joana" />
+          </p>
+
+          <p>
+            <label for="senha_cad">CPF</label>
+            <input id="senha_cad" name="senha_cad" type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+              placeholder="ex.: 000.000.000-00" />
+          </p>
+
+          <p>
+            <input type="submit" value="Excluir Cadastro" />
+          </p>
+
+          <p class="link">
+            Cadastrar uma conta?
+            <button href="#paracadastro" type="button" style="cursor: pointer;"
+                onclick="document.getElementById('cadastro').style.display='block';
+            document.getElementById('login').style.display='none'">Cadastre-se
+              </button>
+          </p>
+        </form>
+      </div>
+
+      <!--FORMULÁRIO DE CADASTRO-->
+      <div id="cadastro">
+        <center>
+          <img src="logo_iti.png" alt="" srcset="" width="30%" height="30%" style="margin-top: 15px; margin-left:15px">
+        </center>
+        <form method="post" action="">
+          <h1>Cadastrar Pessoa</h1>
+          <p>
+            <label for="m-nome">Nome</label>
+            <input id="m-nome" name="m-nome" required="required" type="text" placeholder="ex.: Joana" />
+          </p>
+
+          <p>
+            <label for="senha_cad">CPF</label>
+            <input id="m-cpf" name="m-cpf" type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+              placeholder="ex.: 000.000.000-00" />
+          </p>
+
+          <p>
+            <label for="senha_cad">Data de Nascimento</label>
+            <input id="m-data" name="senha_cad" required="required" type="datetime-local">
+          </p>
+
+          <p>
+            <label for="senha_cad">Matricula Siape</label>
+            <input id="m-matricula" name="senha_cad" required="required" type="text" placeholder="ex.: 00000000000" />
+          </p>
+
+          <p>
+            <label for="email_cad">Seu e-mail</label>
+            <input id="m-email" name="email_cad" required="required" type="email"
+              placeholder="ex.: contato@iti.gov.br" />
+          </p>
+
+          <p>
+            <label for="senha_cad">Unidade ID</label>
+            <input id="m-unidade" name="senha_cad" required="required" type="text" placeholder="ex.: abcd" />
+          </p>
+
+        
+
+          <input type="submit" id="btnSalvar" value="Cadastrar" />
+
+          <script>
+            $(document).ready(() => {
+           $('#btnSalvar').click(() => {
+            cadastrarPessoa();
+            });
+            });
+            </script>
+              
+         
+          <div class="tabela-container">
+            <table border="1">
+              <thead>
+                <th class="center">Nome</th>
+                <th>Nascimento</th>
+                <th>Email</th>
+                <th>Matricula</th>
+                <th class="center">Id Unidade</th>
+               
+              </thead>
+            </table>
+          </div>
+          <p>
+            <p class="link">
+              Não quer cadastrar?
+              <button href="#paraexcluir" class="excluir" type="button" style="cursor: pointer;"
+                onclick="document.getElementById('cadastro').style.display='none';
+            document.getElementById('login').style.display='block'">Apagar Cadastro
+              </button>
+            </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+</script>
+
+</html>

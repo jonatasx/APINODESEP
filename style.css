@@ -1,0 +1,262 @@
+@import url('http://fonts.cdnfonts.com/css/rawline');
+
+/* CSS reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rawline', sans-serif;
+}
+
+
+body {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* esconde as ancoras da tela */
+a.links {
+    display: none;
+}
+
+/* content que contem os formulários */
+.content {
+    width: 37.5%;
+    margin: 0px auto;
+    position: relative;
+}
+
+/* formatando o cabeçalho dos formulários */
+h1 {
+    font-size: 48px;
+    color: #071d41;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+h1:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+    background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #405c60;
+    position: relative;
+}
+table {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  th, td {
+    padding: 20px;
+  }
+  
+  thead th {
+    background-color: #f2f2f2;
+    color: #444;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #ebebeb;
+  }
+  
+  td:first-child, th:first-child {
+    text-align: center;
+  }
+  
+  th:nth-child(5), td:nth-child(5) {
+    text-align: center;
+  }
+  .tabela-container {
+    margin-left: 20px;
+  }
+  
+
+/** advanced input styling **/
+/* placeholder */
+::-webkit-input-placeholder {
+    color: #bebcbc;
+    font-style: italic;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #bebcbc;
+    font-style: italic;
+}
+
+input {
+    outline: none;
+}
+
+input:not([type="checkbox"]) {
+    width: 95%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #b2b2b2;
+
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/*estilo do botão submit */
+input[type="submit"] {
+    width: 100% !important;
+    cursor: pointer;
+    background: #071d41;
+    padding: 8px 5px;
+    color: #fff;
+    margin-top: 35px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    text-shadow: 0 1px 1px #333;
+
+
+
+    transition: all 0.2s linear;
+}
+
+input[type="submit"]:hover {
+    background: #09c;
+}
+
+.link {
+    position: absolute;
+    background: #dddddd;
+    color: #7f7c7c;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+    padding: 17px 0px 20px 0px;
+    font-size: 16px;
+    text-align: center;
+    border-top: 1px solid #dbe5e8;
+
+}
+
+button {
+    font-weight: bold;
+    background: #f7f8f1;
+    padding: 6px;
+    color: rgb(7, 29, 65);
+    border: 1px solid #DCDCDC;
+
+
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+button:hover {
+    color: #F8F8F8;
+    background: #071d41;
+    border: 1px solid #071d41;
+}
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target~.content #cadastro,
+#paraexcluir:target~.content #login {
+    z-index: 2;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+/* estilos para para ambos os formulários */
+#cadastro,
+#login {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 18px 6% 60px 6%;
+    background: #F8F8F8;
+
+
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
