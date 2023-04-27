@@ -2,8 +2,8 @@ import sql from 'mssql';
 
 export async function openDb() {
   const config = {
-    user: 'jonatas.pessoa',
-    port: 1433,
+    user: 'IN\jonatas.pessoa',
+    port: 443,
     server: 'COTIC-004221',
     database: 'dbpessoa_exemplo',
     options: {
