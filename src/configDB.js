@@ -4,7 +4,7 @@ export async function openDb() {
   const config = {
     user: 'jonatas.pessoa',
     port: 1433,
-    server: 'localhost',
+    server: 'COTIC-004221',
     database: 'dbpessoa_exemplo',
     options: {
         encrypt: true,
