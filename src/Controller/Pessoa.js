@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const dbConfig = {
   user: 'IN\jonatas.pessoa',
   server: 'localhost',
+  port: 1433,
   database: 'dbpessoa_exemplo',
   options: {
     encrypt: true, // para conexões criptografadas
