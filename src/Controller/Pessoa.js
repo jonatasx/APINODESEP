@@ -11,7 +11,15 @@ const dbConfig = {
   user: 'IN\jonatas.pessoa',
   server: 'localhost',
   database: 'dbpessoa_exemplo',
+  options: {
+    encrypt: true, // para conexões criptografadas
+    trustServerCertificate: true // desativa a verificação do certificado SSL
+  }
 }
+
+sql.connect(dbConfig)
+  .then(() => console.log('Conexão bem sucedida!'))
+  .catch(err => console.error(err))
 
 async function openDb () {
   const pool = await sql.connect(dbConfig)
